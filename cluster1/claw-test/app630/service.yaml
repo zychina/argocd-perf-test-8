@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: perf-test8-app630-svc
+  namespace: clawtest
+  labels:
+    app: perf-test8-app630
+spec:
+  selector:
+    app: perf-test8-app630
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+  type: ClusterIP
